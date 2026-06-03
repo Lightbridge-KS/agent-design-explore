@@ -34,6 +34,10 @@ export default defineConfig({
 							label: 'Harness Engineering in `clickclack`',
 							slug: 'harness-eng/clickclack-harness-engineering',
 						},
+						{
+							label: "Shared Agent-Skills Repository",
+							slug: 'harness-eng/agent-skills-repo-for-sharing-in-org-architecture'
+						}
 					],
 				},
 				{
