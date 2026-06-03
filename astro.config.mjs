@@ -27,6 +27,16 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Harness Engineering',
+					collapsed: false,
+					items: [
+						{
+							label: 'Harness Engineering in `clickclack`',
+							slug: 'harness-eng/clickclack-harness-engineering',
+						},
+					],
+				},
+				{
 					label: 'Ideas-to-Implement ML',
 					collapsed: false,
 					items: [
