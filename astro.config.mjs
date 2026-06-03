@@ -26,6 +26,16 @@ export default defineConfig({
 						},
 					],
 				},
+				{
+					label: 'Ideas-to-Implement ML',
+					collapsed: false,
+					items: [
+						{
+							label: 'Agent-Driven Prostate-Cancer ML',
+							slug: 'idea-to-ml/agent-driven-prostate-ml-system-architecture',
+						},
+					],
+				},
 				// Future groups (e.g. "Concepts & Patterns") are added here as
 				// synthesized pages land. See CLAUDE.md for the content model.
 			],
