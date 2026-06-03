@@ -1,5 +1,8 @@
+# temp file
+_temp/
 # build output
 dist/
+.netlify/
 # generated types
 .astro/
 

@@ -1,40 +1,32 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Agent Design Explore
+description: Ideas, design patterns, and real-world examples for building agent-first systems and harnesses.
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
+  tagline: Ideas, design patterns, and real-world examples for building agent-first systems & harnesses — distilled from real OSS case studies.
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Get Started
+      link: /oss/agent-scripts-system-architecture/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+    - text: View on GitHub
+      link: https://github.com/Lightbridge-KS/agent-design-explore
       icon: external
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## What's Inside
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+<CardGrid>
+	<Card title="Case Studies (OSS)" icon="open-book">
+		Architecture walkthroughs of real open-source agent systems and harnesses —
+		how `AGENTS.md`, skills, scripts, and slash commands wire together at runtime.
+		These are the **raw input** of the book. [Start with agent-scripts →](/oss/agent-scripts-system-architecture/)
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="Concepts & Patterns" icon="puzzle">
+		Synthesized knowledge distilled from the case studies — reusable design
+		patterns and architectural ideas for agent-first systems. _Coming as the
+		case-study library grows._
 	</Card>
 </CardGrid>
