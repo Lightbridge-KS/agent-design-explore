@@ -9,6 +9,14 @@ A book containing ideas, design/architectural patterns, and examples for buildin
 - **Deploy:** Netlify (static output, config in `netlify.toml`)
 - **Package manager:** pnpm
 
+### Config gotchas
+
+- **GFM tables in `.mdx` depend on the explicit `remark-gfm` registration** in
+  `astro.config.mjs` (`markdown.remarkPlugins: [remarkGfm]`). Astro auto-injects GFM into
+  the `.md` pipeline, but `@astrojs/mdx` only copies the *explicit* `remarkPlugins` array —
+  so without this line, `.mdx` pages silently render tables (and other GFM) as literal text
+  while `.md` pages look fine. **Do not remove `remark-gfm`** unless every page is `.md`.
+
 ## Content
 
 - Pages live in `src/content/docs/`.
