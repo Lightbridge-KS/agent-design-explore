@@ -80,19 +80,14 @@ agent this matters because it can set everything through env vars
 
 ### Output discipline: stdout vs stderr, JSON vs plain
 
-<table>
-  <thead>
-    <tr><th>Need</th><th>Mechanism</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Data a program consumes</td><td><strong>stdout</strong></td></tr>
-    <tr><td>Diagnostics / progress</td><td><strong>stderr</strong></td></tr>
-    <tr><td>Structured single result</td><td><code>--json</code> → one JSON object</td></tr>
-    <tr><td>Structured stream</td><td><code>--json</code> → newline-delimited JSON (one event per line)</td></tr>
-    <tr><td>Stable single field</td><td><code>--plain</code></td></tr>
-    <tr><td>Non-interactive safety</td><td><code>--no-input</code> (auto when stdin isn't a TTY)</td></tr>
-  </tbody>
-</table>
+| Need | Mechanism |
+|------|-----------|
+| Data a program consumes | **stdout** |
+| Diagnostics / progress | **stderr** |
+| Structured single result | `--json` → one JSON object |
+| Structured stream | `--json` → newline-delimited JSON (one event per line) |
+| Stable single field | `--plain` |
+| Non-interactive safety | `--no-input` (auto when stdin isn't a TTY) |
 
 The guidance is explicit: *use `--json` for anything you parse, and `--plain` only for
 stable single-field output.* The stdout/stderr split is what lets `… --json | jq` work
@@ -112,17 +107,12 @@ agent-summarize incident.log | clickclack threads reply msg_01kr... --stdin
 This is the highest-leverage idea in the doc. Because the codes are stable and
 documented, an agent reacts to *categories of failure* without scraping text:
 
-<table>
-  <thead>
-    <tr><th>Code</th><th>Meaning</th><th>Code</th><th>Meaning</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>0</td><td>Success</td><td>4</td><td>Not found</td></tr>
-    <tr><td>1</td><td>Generic failure</td><td>5</td><td>Permission denied</td></tr>
-    <tr><td>2</td><td>Invalid usage</td><td>10</td><td>Network unavailable</td></tr>
-    <tr><td>3</td><td>Auth required/failed</td><td>11</td><td>Unexpected server response</td></tr>
-  </tbody>
-</table>
+| Code | Meaning | Code | Meaning |
+|------|---------|------|---------|
+| 0 | Success | 4 | Not found |
+| 1 | Generic failure | 5 | Permission denied |
+| 2 | Invalid usage | 10 | Network unavailable |
+| 3 | Auth required/failed | 11 | Unexpected server response |
 
 > *"Scripts should branch on exit codes, not error text."*
 

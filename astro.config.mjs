@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import mermaid from 'astro-mermaid';
+import remarkGfm from 'remark-gfm';
 
 // https://astro.build/config
 export default defineConfig({
@@ -63,4 +64,12 @@ export default defineConfig({
 			autoTheme: true,
 		}),
 	],
+	// GFM (tables, strikethrough, etc.) is auto-injected into the `.md` pipeline by
+	// Astro core, but that injection isn't reflected into what `@astrojs/mdx`'s
+	// `extendMarkdownConfig` copies — so `.mdx` pages lose GFM tables. Listing
+	// remark-gfm here puts it in the shared `remarkPlugins` array, which MDX does
+	// copy, fixing tables in both `.md` and `.mdx`.
+	markdown: {
+		remarkPlugins: [remarkGfm],
+	},
 });

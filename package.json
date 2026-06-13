@@ -15,5 +15,8 @@
     "astro-mermaid": "^2.0.2",
     "mermaid": "^11.15.0",
     "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "remark-gfm": "4.0.1"
   }
 }
