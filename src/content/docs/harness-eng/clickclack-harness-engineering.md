@@ -263,6 +263,11 @@ The binary exposes machine-parseable contracts an agent can rely on:
 Crucially, the doc notes "all LLM/provider behavior [stays] outside the ClickClack binary"
 — the harness gives agents a stable *surface*, not an embedded model.
 
+> This contract is the *opposite side of the boundary* from the rest of this chapter:
+> here the agent consumes the **shipped product** rather than working inside the repo.
+> The principles behind it — and a reusable template you can drop into your own repo —
+> are distilled in [Agent-Friendly CLI Design](/harness-eng/agent-friendly-cli-design/).
+
 ---
 
 ## 6. Layer B (part 2) — Verification & the feedback loop

@@ -37,6 +37,10 @@ export default defineConfig({
 						{
 							label: "Shared Agent-Skills Repository",
 							slug: 'harness-eng/agent-skills-repo-for-sharing-in-org-architecture'
+						},
+						{
+							label: 'Agent-Friendly CLI Design',
+							slug: 'harness-eng/agent-friendly-cli-design',
 						}
 					],
 				},
