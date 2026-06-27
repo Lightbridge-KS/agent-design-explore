@@ -40,6 +40,10 @@ export default defineConfig({
 							slug: 'harness-eng/agent-skills-repo-for-sharing-in-org-architecture'
 						},
 						{
+							label: ".Skill",
+							slug: 'harness-eng/dotskills-architecture'
+						},
+						{
 							label: 'Agent-Friendly CLI Design',
 							slug: 'harness-eng/agent-friendly-cli-design',
 						}
