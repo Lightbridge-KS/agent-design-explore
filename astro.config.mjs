@@ -25,6 +25,10 @@ export default defineConfig({
 							label: 'agent-scripts',
 							slug: 'oss/agent-scripts-system-architecture',
 						},
+						{
+							label: 'Deep Research Skills',
+							slug: 'oss/deep-research-architecture-ax-ux',
+						}
 					],
 				},
 				{
