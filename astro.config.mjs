@@ -44,6 +44,10 @@ export default defineConfig({
 							slug: 'harness-eng/agent-skills-repo-for-sharing-in-org-architecture'
 						},
 						{
+							label: 'Autoreview Agentic Architecture',
+							slug: 'harness-eng/autoreview-agentic-architecture',
+						},
+						{
 							label: ".Skill",
 							slug: 'harness-eng/dotskills-architecture'
 						},
