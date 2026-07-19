@@ -85,11 +85,11 @@ sequenceDiagram
     participant V as Report validator
 
     H->>S: Skill is triggered or chosen for closeout
-    S-->>H: Freeze scope; choose local, branch, or commit review
+    S-->>H: Freeze scope, then choose local, branch, or commit review
     H->>A: Run autoreview with target and engine options
     A->>G: Resolve target and snapshot source tree
     G-->>A: Full validated diff plus changed-path set
-    A->>A: Scan/redact secrets; reject unsafe input; partition if oversized
+    A->>A: Scan/redact secrets, reject unsafe input, partition if oversized
 
     loop One bounded prompt at a time
         A->>E: Prompt via stdin in an empty/neutral workspace
@@ -101,7 +101,7 @@ sequenceDiagram
     A->>A: Merge reviewer and chunk reports
     A->>G: Compare source tree with frozen snapshot
     A-->>H: Human report, optional JSON, and exit status
-    H->>H: Verify findings; fix and test if in scope; rerun if needed
+    H->>H: Verify findings, fix and test if in scope, rerun if needed
 ```
 
 ### 3.2 The deterministic pipeline
