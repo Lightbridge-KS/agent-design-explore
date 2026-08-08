@@ -28,6 +28,18 @@ export default defineConfig({
 						{
 							label: 'Deep Research Skills',
 							slug: 'oss/deep-research-architecture-ax-ux',
+						},
+						{
+							label: 'Excalidraw MCP — System Architecture',
+							slug: 'oss/mcp-excalidraw-system-architecture',
+						},
+						{
+							label: 'Excalidraw MCP — Agentic Architecture',
+							slug: 'oss/mcp-excalidraw-agentic-architecture',
+						},
+						{
+							label: 'Excalidraw MCP — AX Analysis',
+							slug: 'oss/mcp-excalidraw-ax-interface',
 						}
 					],
 				},
