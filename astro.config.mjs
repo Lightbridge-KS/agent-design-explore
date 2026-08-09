@@ -54,6 +54,20 @@ export default defineConfig({
 									slug: 'oss/llm-wiki-agentic-architecture',
 								},
 							],
+						},
+						{
+							label: 'LLM Wiki (lucasastorian)',
+							collapsed: false,
+							items: [
+								{
+									label: 'System Architecture',
+									slug: 'oss/llm-wiki-lucasastorian-system-architecture',
+								},
+								{
+									label: 'Agentic Architecture',
+									slug: 'oss/llm-wiki-lucasastorian-agentic-architecture',
+								},
+							],
 						}
 					],
 				},
