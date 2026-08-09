@@ -40,6 +40,20 @@ export default defineConfig({
 						{
 							label: 'Excalidraw MCP — AX Analysis',
 							slug: 'oss/mcp-excalidraw-ax-interface',
+						},
+						{
+							label: 'LLM Wiki (nashsu)',
+							collapsed: false,
+							items: [
+								{
+									label: 'System Architecture',
+									slug: 'oss/llm-wiki-system-architecture',
+								},
+								{
+									label: 'Agentic Architecture',
+									slug: 'oss/llm-wiki-agentic-architecture',
+								},
+							],
 						}
 					],
 				},
