@@ -68,6 +68,24 @@ export default defineConfig({
 									slug: 'oss/llm-wiki-lucasastorian-agentic-architecture',
 								},
 							],
+						},
+						{
+							label: 'Pi Agent Harness',
+							collapsed: false,
+							items: [
+								{
+									label: 'System Architecture',
+									slug: 'oss/pi-mono-system-architecture',
+								},
+								{
+									label: 'Agentic Architecture',
+									slug: 'oss/pi-mono-agentic-architecture',
+								},
+								{
+									label: 'Extension Architecture',
+									slug: 'oss/pi-mono-extension-architecture',
+								},
+							],
 						}
 					],
 				},
