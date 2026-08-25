@@ -125,6 +125,26 @@ export default defineConfig({
 						},
 					],
 				},
+				{
+					label: 'Libraries & Packages',
+					collapsed: false,
+					items: [
+						{
+							label: 'Microsoft Agent Framework',
+							collapsed: false,
+							items: [
+								{
+									label: 'System Architecture',
+									slug: 'lib-pkg/microsoft-agent-framework-system-architecture',
+								},
+								{
+									label: 'SDK & DX Surface',
+									slug: 'lib-pkg/microsoft-agent-framework-surface-architecture',
+								},
+							],
+						},
+					],
+				},
 				// Future groups (e.g. "Concepts & Patterns") are added here as
 				// synthesized pages land. See CLAUDE.md for the content model.
 			],
