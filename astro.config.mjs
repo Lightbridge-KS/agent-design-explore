@@ -126,6 +126,32 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Agent Client Protocol (ACP)',
+					collapsed: false,
+					items: [
+						{
+							label: 'Overview',
+							slug: 'acp/acp-overview',
+						},
+						{
+							label: 'System & OOP Architecture',
+							slug: 'acp/acp-system-architecture',
+						},
+						{
+							label: 'User-Facing API & UX/DX',
+							slug: 'acp/acp-surface-architecture',
+						},
+						{
+							label: 'Extension Points',
+							slug: 'acp/acp-extension-points',
+						},
+						{
+							label: 'Building a Real Agent',
+							slug: 'acp/acp-agent-implementation',
+						},
+					],
+				},
+				{
 					label: 'Libraries & Packages',
 					collapsed: false,
 					items: [
