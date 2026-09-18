@@ -66,7 +66,7 @@ sequenceDiagram
     participant B as Browser tab
 
     H->>S: skill triggers ("draw the architecture...")
-    S-->>H: plan coordinates first; batch add; then VERIFY
+    S-->>H: plan coordinates first, batch add, then VERIFY
     H->>T: add [elements JSON]
     T->>C: POST /api/elements/batch (auto-starts canvas)
     C-->>B: WS broadcast → live render
@@ -74,7 +74,7 @@ sequenceDiagram
     T-->>H: structured text: ids, positions, labels, connections
     H->>T: screenshot
     C->>B: export request → PNG
-    T-->>H: image (MCP: inline; CLI: file path)
+    T-->>H: image (MCP inline, CLI file path)
     Note over H: Quality checklist from SKILL.md:<br/>truncation? overlap? arrow crossing?
     H->>T: update auth-svc --set '{"width":220}'
     H->>T: screenshot (re-verify, then proceed)

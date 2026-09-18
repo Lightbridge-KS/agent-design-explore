@@ -1,3 +1,6 @@
 [build]
-  command = "pnpm run build"
+  command = "pnpm run build:deploy"
   publish = "dist"
+
+[build.environment]
+  PDF_MERMAID_THEME = "neutral"

@@ -157,7 +157,7 @@ flowchart TD
     subgraph Wiki["Wiki domain"]
         merge["page-merge.ts"]
         links["enrich-wikilinks.ts"]
-        graph["wiki-graph.ts"]
+        wikiGraph["wiki-graph.ts"]
         fm["frontmatter.ts / wiki-schema.ts"]
     end
     ingest --> client

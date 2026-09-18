@@ -2,11 +2,14 @@
   "name": "agent-design-explore",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@10.18.2",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "build:deploy": "node scripts/build-pdf.mjs --output-dir dist/downloads",
     "preview": "astro preview",
+    "pdf": "node scripts/build-pdf.mjs",
     "astro": "astro"
   },
   "dependencies": {
@@ -17,6 +20,14 @@
     "sharp": "^0.34.5"
   },
   "devDependencies": {
-    "remark-gfm": "4.0.1"
+    "pdf-lib": "1.17.1",
+    "puppeteer": "23.11.1",
+    "remark-gfm": "4.0.1",
+    "starlight-to-pdf": "1.4.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "puppeteer"
+    ]
   }
 }
