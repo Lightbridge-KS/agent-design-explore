@@ -1,0 +1,29 @@
+---
+import DefaultSocialIcons from '@astrojs/starlight/components/SocialIcons.astro';
+import { Icon } from '@astrojs/starlight/components';
+---
+
+<DefaultSocialIcons />
+<a
+	href="/downloads/agent-design-explore.pdf"
+	download="agent-design-explore.pdf"
+	class="sl-flex"
+	aria-label="Download Agent Design Explore as PDF"
+	title="Download PDF"
+>
+	<Icon name="cloud-download" />
+</a>
+
+<style>
+	@layer starlight.core {
+		a {
+			color: var(--sl-color-text-accent);
+			margin: -0.5em;
+			padding: 0.5em;
+		}
+
+		a:hover {
+			color: var(--sl-color-white);
+		}
+	}
+</style>

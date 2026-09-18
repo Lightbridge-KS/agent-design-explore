@@ -4,11 +4,33 @@ import starlight from '@astrojs/starlight';
 import mermaid from 'astro-mermaid';
 import remarkGfm from 'remark-gfm';
 
+const isPdfExport = process.env.PDF_EXPORT === '1';
+const pdfMermaidTheme = process.env.PDF_MERMAID_THEME || 'neutral';
+const supportedMermaidThemes = new Set([
+	'base',
+	'dark',
+	'default',
+	'forest',
+	'neutral',
+]);
+
+if (isPdfExport && !supportedMermaidThemes.has(pdfMermaidTheme)) {
+	throw new Error(
+		`Unsupported PDF_MERMAID_THEME "${pdfMermaidTheme}". Expected one of: ${[
+			...supportedMermaidThemes,
+		].join(', ')}.`,
+	);
+}
+
 // https://astro.build/config
 export default defineConfig({
+	outDir: isPdfExport ? './.pdf-site' : './dist',
 	integrations: [
 		starlight({
 			title: 'Agent Design Explore',
+			components: {
+				SocialIcons: './src/components/SocialIcons.astro',
+			},
 			social: [
 				{
 					icon: 'github',
@@ -176,8 +198,8 @@ export default defineConfig({
 			],
 		}),
 		mermaid({
-			theme: 'forest',
-			autoTheme: true,
+			theme: isPdfExport ? pdfMermaidTheme : 'forest',
+			autoTheme: !isPdfExport,
 		}),
 	],
 	// GFM (tables, strikethrough, etc.) is auto-injected into the `.md` pipeline by

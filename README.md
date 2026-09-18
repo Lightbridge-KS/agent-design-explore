@@ -36,9 +36,32 @@ The book has two layers:
 
 All commands run from the project root:
 
-| Command         | Action                                       |
-| :-------------- | :------------------------------------------- |
-| `pnpm install`  | Install dependencies                         |
-| `pnpm dev`      | Start local dev server at `localhost:4321`   |
-| `pnpm build`    | Build the production site to `./dist/`       |
-| `pnpm preview`  | Preview the build locally before deploying   |
+| Command             | Action                                                    |
+| :------------------ | :-------------------------------------------------------- |
+| `pnpm install`      | Install dependencies                                      |
+| `pnpm dev`          | Start local dev server at `localhost:4321`                |
+| `pnpm build`        | Build the production site to `./dist/`                    |
+| `pnpm preview`      | Preview the build locally before deploying                |
+| `pnpm pdf`          | Export the complete book to `output/pdf/`                 |
+| `pnpm build:deploy` | Build the website and its downloadable PDF into `dist/`   |
+
+## PDF edition
+
+`pnpm pdf` builds the website and a separate print snapshot, starts a temporary
+local preview, and exports the Starlight reading order as a single A4 PDF:
+
+```text
+output/pdf/agent-design-explore.pdf
+```
+
+The export includes a cover, table of contents, internal links, PDF outline,
+chapter page breaks, and page numbers. Print-specific assets live in `pdf/`.
+
+The downloadable edition is deployed at
+[`/downloads/agent-design-explore.pdf`](https://agent-design-explore-lightbridge.netlify.app/downloads/agent-design-explore.pdf).
+Its Mermaid diagrams use the fixed, print-friendly `neutral` theme, while the
+website keeps its adaptive forest light/dark themes. Set `PDF_MERMAID_THEME` to
+another supported Mermaid theme when exporting, or set `PDF_BROWSER_EXECUTABLE`
+to force a specific Chrome/Chromium executable. The exporter prefers Puppeteer's
+pinned browser and falls back to a known system installation when that managed
+browser cannot launch.

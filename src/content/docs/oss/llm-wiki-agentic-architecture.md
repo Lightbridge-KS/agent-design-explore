@@ -87,7 +87,7 @@ sequenceDiagram
     R->>L: llm_config.is_usable_for_backend_http() == true
     loop "≤ iteration budget (4–8+)"
         L->>L: build_agent_context() → fit_context_to_model()
-        L->>M: generate (structured; images only on step 0)
+        L->>M: generate (structured, images only on step 0)
         M-->>L: raw JSON → parse_agent_loop_action()
         L->>T: execute(tool, input, ToolContext)
         T-->>L: AgentObservation (+ AgentEvent ToolStart/ToolEnd/ReferenceAdded)

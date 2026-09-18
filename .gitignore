@@ -2,7 +2,9 @@
 _temp/
 # build output
 dist/
+.pdf-site/
 .netlify/
+output/pdf/
 # generated types
 .astro/
 

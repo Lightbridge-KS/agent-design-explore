@@ -491,7 +491,7 @@ sequenceDiagram
     M->>R: move to Active, then Preview
     E-->>M: feedback during Preview
     M->>R: Completed — moves into stable schema + visible docs
-    R->>E: schema-v* release; SDKs regenerate
+    R->>E: schema-v* release, SDKs regenerate
 ```
 
 Note the ordering: **implementation precedes stabilization**, and every step of the way the
